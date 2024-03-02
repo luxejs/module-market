@@ -1,18 +1,20 @@
+<% modules.forEach((module) => { %>
+
 <div class="card card-compact w-96 bg-base-100 shadow-xl">
     <div class="mockup-browser border bg-base-300">
 
         <div class="mockup-browser-toolbar">
-            <a href="https://www.comstats.org/" target="_blank" class="input">https://www.comstats.org/</a>
+            <a href="<%= module.url %>" target="_blank" class="input"><%= module.url %></a>
         </div>
-        <div class="justify-center card-title">ComStats</div>
+        <div class="justify-center card-title"><%= module.name %></div>
 
-        <div class="flex justify-center px-4 py-16 bg-base-200"> <a href="https://www.comstats.org/" target="_blank"><img class="w-20"
-                src="https://www.comstats.org/_next/image?url=%2FAnimated1.gif&w=384&q=75"></a>
+        <div class="flex justify-center px-4 py-16 bg-base-200"> <a href="<%= module.url %>" target="_blank"><img class="w-20"
+                src="<%= module.image %>"></a>
         </div>
         <div class="card-body">
 
-            <div class="card-text">All Statistics of CommuneAI at one place. Staking infrastructure, prices, validators,
-                miners, swap, bridge, exchange for $COMAI
+            <div class="card-text">
+                <%= module.description %>
             </div>
             <div class="card-actions justify-center">
                 <button class="btn btn-error">Unstake</button>
@@ -23,3 +25,4 @@
 
     </div>
 </div>
+<% }) %>
