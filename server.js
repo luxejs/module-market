@@ -10,7 +10,7 @@ app.set('view engine', 'ejs');
 let modules = [
     {
         name: "ComStats",
-        url: "https://www.comstats.org/",
+        url: "https://comstats.org/",
         image: "https://www.comstats.org/_next/image?url=%2FAnimated1.gif&w=384&q=75",
         description: "All Statistics of CommuneAI at one place. Staking infrastructure, prices, validators, miners, swap, bridge, exchange for $COMAI."   
     },
@@ -34,7 +34,7 @@ let modules = [
     },
     {
         name: "WebZero.events",
-        url: "https://www.webzero.events/",
+        url: "https://webzero.events/",
         image: "https://static.wixstatic.com/media/b432cc_d48b66fc172547319d6bc3db6f34e7a0%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/b432cc_d48b66fc172547319d6bc3db6f34e7a0%7Emv2.png",
         description: "Web3 events app powered by WebZero to connect to DAOs and community-staking to fund workshops and events."
            
