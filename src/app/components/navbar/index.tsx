@@ -97,7 +97,7 @@ const Navbar = () => {
             </div>
 
             <Link href="https://explorer.comwallet.io/" target='_blank'>
-                <button className="btn btn-ghost p-2"><MdOutlineTravelExplore size={28} /></button>
+                <button className="btn btn-ghost p-2 text-orange-400"><MdOutlineTravelExplore size={28} /></button>
               </Link>
               {!isInitialized && <FaSpinner className="spinner" />}
             {isInitialized && (
