@@ -18,6 +18,7 @@ export default function Home() {
               validatorKey={item.validatorKey}
               verified={item.verified}
               tags={item.tags}
+              disabled={item.disabled}
             />
           ))}
         </div>
