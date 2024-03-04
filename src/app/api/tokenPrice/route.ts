@@ -34,7 +34,7 @@ export async function GET(request: Request) {
     } catch (error) {
         // Log the error for debugging
         console.error('Error in GET function:', error);
-        return new Response(JSON.stringify({ error: error.message }), {
+        return new Response(JSON.stringify({ error: 'Failed to fetch coin price'}), {
             status: 500,
             headers: {
                 'Content-Type': 'application/json',
