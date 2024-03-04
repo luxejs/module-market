@@ -5,6 +5,8 @@ import Image from "next/image"
 import React from "react"
 import Ticker from '../ticker';
 import Link from 'next/link';
+import classnames from 'classnames';
+
 // // import CMCWidget from '../CMCWidget';
 // import Script from 'next/script';
 
@@ -25,7 +27,7 @@ import {
   FaTwitter,
   FaWallet,
   FaYoutube,
-  
+
 } from "react-icons/fa"
 import { TbCubePlus } from "react-icons/tb";
 
@@ -88,7 +90,7 @@ const Navbar = () => {
               />
               {/* <button className="absolute right-2 top-1/2 transform -translate-y-1/2">+</button> */}
               <Link href="https://github.com/luxejs/comhub-app/issues/new" target='_blank'>
-              <button className="absolute right-2 top-1/2 transform -translate-y-1/2 btn btn-ghost text-xl"><TbCubePlus /></button>
+                <button className="absolute right-2 top-1/2 transform -translate-y-1/2 btn btn-ghost text-xl"><TbCubePlus /></button>
               </Link>
 
             </div>
@@ -125,22 +127,24 @@ const Navbar = () => {
 
 
       </div>
-      {/* <div className={`divider divider-warning justify-center flex`}> */}
-      <div className={`divider divider-${isInitialized && isConnected ? 'warning' : isInitialized ? 'accent' : 'neutral'} justify-center flex`}>
-
-        <Link href="https://www.communeai.org/" target="_blank"><p>powered by
-          <Image
-            width={130}
-            height={130}
-            className="cursor-pointer"
-            alt="ComHub - module marketplace"
-            src="https://www.communeai.org/gif/logo/CubesShufflingGIF.gif"
-            unoptimized
-          />
-        </p></Link>
-      </div>
-    </>
-  )
+        <div className={classnames('divider justify-center flex', {
+          'divider-warning': isInitialized && isConnected,
+          'divider-accent': isInitialized && !isConnected,
+          'divider-neutral': !isInitialized
+        })}>
+          <Link href="https://www.communeai.org/" target="_blank"><p>powered by
+            <Image
+              width={130}
+              height={130}
+              className="cursor-pointer"
+              alt="ComHub - module marketplace"
+              src="https://www.communeai.org/gif/logo/CubesShufflingGIF.gif"
+              unoptimized
+            />
+          </p></Link>
+        </div>
+      </>
+      )
 }
 
-export default Navbar
+      export default Navbar

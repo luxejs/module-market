@@ -20,6 +20,7 @@ const ModuleCard = ({ url, name, image, description, validatorKey, verified, tag
   const { isConnected, addStake, removeStake } = usePolkadot()
 
   return (
+    <>
     <div className="card card-compact w-96 bg-base-100 shadow-xl m-4">
       <div className="mockup-browser border bg-base-300 h-full">
         <div className="mockup-browser-toolbar">
@@ -76,6 +77,7 @@ const ModuleCard = ({ url, name, image, description, validatorKey, verified, tag
         </div>
       </div>
     </div>
+    </>
   )
 }
 
