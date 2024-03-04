@@ -4,8 +4,8 @@ import "react-responsive-modal/styles.css"
 import "@/src/app/globals.css"
 
 export const metadata: Metadata = {
-  title: "Comhub",
-  description: "A complete place for Commune Modules",
+  title: "ComHub",
+  description: "A marketplace for Commune-AI Modules",
 }
 
 export default function RootLayout({
