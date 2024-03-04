@@ -26,7 +26,7 @@
     {
         "name": "WebZero.events",
         "url": "https://webzero.events/",
-        "image": "https://static.wixstatic.com/media/b432cc_d48b66fc172547319d6bc3db6f34e7a0%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/b432cc_d48b66fc172547319d6bc3db6f34e7a0%7Emv2.png",
+        "image": "/images/webzero.png",
         "description": "Web3 events app powered by WebZero to connect to DAOs and community-staking to fund workshops and events."
     }
 ]
