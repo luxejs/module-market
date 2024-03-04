@@ -19,10 +19,10 @@
 
     },
     {
-        "name": "ComSwap",
+        "name": "ComSwap.io",
         "url": "https://comswap.io/",
         "image": "https://comswap.io/static/media/logo.0eafc56c200101eecb87.png",
-        "description": "OTC $COMAI exchange",
+        "description": "$COMAI trading platform",
         "validatorKey": "5CXiWwsS76H2vwroWu4SvdAS3kxprb7aFtqWLxxZC5FNhYri",
         "verified": true,
         "tags": ["staking", "wallet"]
@@ -31,9 +31,19 @@
         "name": "ComWallet by ComSwap",
         "url": "https://comwallet.io/",
         "image": "https://comwallet.io/logo.svg",
-        "description": "Wallet for $COMAI",
+        "description": "Non-Custodial Wallet for $COMAI",
         "validatorKey": "5CXiWwsS76H2vwroWu4SvdAS3kxprb7aFtqWLxxZC5FNhYri",
         "verified": true,
         "tags": ["staking", "wallet"]
+    },
+    {
+        "name": "ComBridge by ComSwap",
+        "url": "https://bridge.comwallet.io/",
+        "image": "/images/combridge-logo.png",
+        "description": "Bridge $COMAI to Ethereum (ETH) Mainnet",
+        "validatorKey": "5CXiWwsS76H2vwroWu4SvdAS3kxprb7aFtqWLxxZC5FNhYri",
+        "verified": true,
+        "tags": ["bridge", "wallet"]
     }
+
 ]
