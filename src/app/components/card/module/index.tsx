@@ -14,7 +14,7 @@ interface ModuleCardInterface {
   description: string
   validatorKey: string
   verified: boolean
-  tags: [string]
+  tags: string[]
 }
 const ModuleCard = ({ url, name, image, description, validatorKey, verified, tags }: ModuleCardInterface) => {
   const { isConnected, addStake, removeStake } = usePolkadot()
@@ -29,7 +29,7 @@ const ModuleCard = ({ url, name, image, description, validatorKey, verified, tag
         </div>
         <Link href={url} target="_blank">
 
-          <div className="justify-center card-title">{name}<MdVerified className="text-blue-500" /></div>
+          <div className="justify-center card-title">{name}<MdVerified className={`${verified ? 'text-blue-500' : null}`} /></div>
           <div className="flex justify-center px-4 py-16 bg-base-200">
             <div className="relative min-h-40 min-w-40">
               <Image fill src={image} alt="module-image" />
@@ -47,9 +47,9 @@ const ModuleCard = ({ url, name, image, description, validatorKey, verified, tag
                 'badge-primary': tag === 'staking',
                 'badge-info' : tag === 'bridge',
                 'badge-secondary': tag === 'wallet',
-                'badge-success': tag === 'AI',
-                'badge-warning': tag === 'chat' || tag === 'GPT' || tag === "hub",
-                'badge-default' : tag === 'com',
+                'badge-success': tag === 'chat' || tag === 'GPT',
+                'badge-warning':  tag === "hub",
+                'badge-default' : tag === 'com' || tag === 'AI'
               })}>{tag}</div>
             ))}
 
