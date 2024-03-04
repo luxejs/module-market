@@ -1,32 +1,79 @@
 [
     {
+        "name": "ComHub",
+        "url": "https://comhub.app/",
+        "image": "https://comwallet.io/logo.svg",
+        "description": "Marketplace for Commune Ai modules",
+        "validatorKey": "5EJ9AUpSGafWeagdP5nwc5AwcYBkagYSZyx2BmLKWJrGBZUZ",
+        "verified": true,
+        "tags": ["com","hub", "new"],
+        "disabled": true
+    },
+    {
         "name": "ComStats",
         "url": "https://comstats.org/",
         "image": "https://www.comstats.org/_next/image?url=%2FAnimated1.gif&w=384&q=75",
-        "description": "All Statistics of CommuneAI at one place. Staking infrastructure, prices, validators, miners, swap, bridge, exchange for $COMAI."
+        "description": "All statistics of Commune Ai in one place",
+        "validatorKey": "5H9YPS9FJX6nbFXkm9zVhoySJBX9RRfWF36abisNz5Ps9YaX",
+        "verified": true,
+        "tags": ["stats", "staking", "wallet"],
+        "disabled": false
     },
     {
         "name": "ComChat",
         "url": "https://comchat.io/",
         "image": "https://comchat.io/icons/favicon-32x32.png",
-        "description": "LLM GPT aggregator built on COMAI"
+        "description": "LLM GPT aggregator built on Commune Ai",
+        "validatorKey": "5D4o6H19z6ctWjS9HzxBpMxqhuzCCCsgXk49AqXGPUqZEpRt",
+        "verified": true,
+        "tags": ["chat","GPT","Ai"],
+        "disabled": false
+
+
     },
     {
-        "name": "ComSwap",
+        "name": "ComSwap.io",
         "url": "https://comswap.io/",
         "image": "https://comswap.io/static/media/logo.0eafc56c200101eecb87.png",
-        "description": "OTC $COMAI exchange"
+        "description": "$COMAI trading platform",
+        "validatorKey": "5CXiWwsS76H2vwroWu4SvdAS3kxprb7aFtqWLxxZC5FNhYri",
+        "verified": true,
+        "tags": ["staking", "wallet"],
+        "disabled": false
+
     },
     {
-        "name": "ComWallet",
+        "name": "ComWallet by ComSwap",
         "url": "https://comwallet.io/",
         "image": "https://comwallet.io/logo.svg",
-        "description": "Wallet for $COMAI"
+        "description": "Non-custodial wallet for $COMAI",
+        "validatorKey": "5CXiWwsS76H2vwroWu4SvdAS3kxprb7aFtqWLxxZC5FNhYri",
+        "verified": true,
+        "tags": ["staking", "wallet"],
+        "disabled": false
+
     },
     {
-        "name": "WebZero.events",
+        "name": "ComBridge by ComSwap",
+        "url": "https://bridge.comwallet.io/",
+        "image": "/images/combridge-logo.png",
+        "description": "$COMAI bridge to Ethereum (ETH) Mainnet",
+        "validatorKey": "5CXiWwsS76H2vwroWu4SvdAS3kxprb7aFtqWLxxZC5FNhYri",
+        "verified": true,
+        "tags": ["bridge", "wallet"],
+        "disabled": false
+
+    },
+    {
+        "name": "WebZero Events",
         "url": "https://webzero.events/",
-        "image": "https://static.wixstatic.com/media/b432cc_d48b66fc172547319d6bc3db6f34e7a0%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/b432cc_d48b66fc172547319d6bc3db6f34e7a0%7Emv2.png",
-        "description": "Web3 events app powered by WebZero to connect to DAOs and community-staking to fund workshops and events."
+        "image": "/images/webzero-logo.png",
+        "description": "Funding web3 events and workshops",
+        "validatorKey": "5Dkz6iet2LQsUh2K3bdzoRyUYHkgd1hKFNGT5rcY4e82y5cV",
+        "verified": false,
+        "tags": ["events", "coming soon"],
+        "disabled": true
+
     }
+
 ]

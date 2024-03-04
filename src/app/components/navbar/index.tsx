@@ -3,6 +3,22 @@ import { usePolkadot } from "@/src/context"
 import { truncateWalletAddress } from "@/src/utils"
 import Image from "next/image"
 import React from "react"
+import Ticker from '../ticker';
+import Link from 'next/link';
+import classnames from 'classnames';
+
+// // import CMCWidget from '../CMCWidget';
+// import Script from 'next/script';
+
+// const CMCWidget = () => {
+//  return (
+//     <>
+//       <div id="coinmarketcap-widget-marquee" coins="29509,22974,1,1027" currency="USD" theme="dark" transparent="true" show-symbol-logo="true"></div>
+//       <Script src="https://files.coinmarketcap.com/static/widget/coinMarquee.js" strategy="beforeInteractive" />
+//     </>
+//  );
+// };
+
 import {
   FaDiscord,
   FaGithub,
@@ -11,73 +27,130 @@ import {
   FaTwitter,
   FaWallet,
   FaYoutube,
+
 } from "react-icons/fa"
+import { TbCubePlus } from "react-icons/tb";
+import { MdOutlineTravelExplore } from "react-icons/md";
+
 const Navbar = () => {
-  const { isInitialized, handleConnect, selectedAccount } = usePolkadot()
+  const { isInitialized, handleConnect, isConnected, selectedAccount } = usePolkadot()
 
   return (
-    <div className="container py-4">
-      <div className="navbar bg-transparent justify-between">
-        <div className="flex gap-x-3">
-          <a href="/" className="btn btn-ghost text-xl">
-            Module.Marketplace
-          </a>
-          <a href="https://discord.gg/communeai" target="_blank">
-            <FaDiscord size={30} />
-          </a>
+    <>
+      <div className="container">
+        <div className="navbar bg-transparent justify-between">
+          <div className="flex gap-x-3">
+            <Link href="/">
+              <button className="btn btn-ghost text-xl">
+                <Image
+                  width={130}
+                  height={130}
+                  // onClick={handleConnect}
+                  className="cursor-pointer"
+                  alt="ComHub - module marketplace"
+                  src="/images/comhub-logo.png"
+                />
+              </button>
+            </Link>
 
-          <a href="https://twitter.com/communeaidotorg" target="_blank">
-            <FaTwitter size={30} />
-          </a>
+            <p>socials</p>
+            <Link href="https://discord.gg/communeai" target="_blank">
+              <button className="btn btn-ghost p-1"><FaDiscord size={30} /></button>
+            </Link>
 
-          <a href="https://www.youtube.com/@omnipotentlabs" target="_blank">
-            <FaYoutube size={30} />
-          </a>
+            <Link href="https://twitter.com/communeaidotorg" target="_blank">
+              <button className="btn btn-ghost p-1"><FaTwitter size={30} /></button>
+            </Link>
+            <Link href="https://t.me/communecommunity" target="_blank">
+              <button className="btn btn-ghost p-1"><FaTelegram size={30} /></button>
+            </Link>
 
-          <a href="https://t.me/communecommunity" target="_blank">
-            <FaTelegram size={30} />
-          </a>
-        </div>
-        <div className="flex gap-x-3">
-          <a href="https://github.com/luxejs/comhub-app" target="_blank">
-            <FaGithub size={30} />
-          </a>
-          <input
+            <Link href="https://www.youtube.com/@omnipotentlabs" target="_blank">
+              <button className="btn btn-ghost p-1"><FaYoutube size={30} /></button>
+            </Link>
+
+
+          </div>
+          {/* <CMCWidget/> */}
+          <Ticker />
+
+          <div className="flex gap-x-3">
+            <Link href="https://github.com/luxejs/comhub-app" target="_blank">
+              <button className="btn btn-ghost p-2"><FaGithub size={30} /></button>
+            </Link>
+            {/* <input
             type="text"
             placeholder="Search Modules"
             className="input input-bordered min-w-80"
-          />
+          /> */}
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="Search Modules"
+                className="input input-bordered min-w-80 pr-10" // Add padding to the right to make space for the plus button
+              />
+              {/* <button className="absolute right-2 top-1/2 transform -translate-y-1/2">+</button> */}
+              <Link href="https://github.com/luxejs/comhub-app/issues/new" target='_blank'>
+                <button className="absolute right-2 top-1/2 transform -translate-y-1/2 btn btn-ghost text-xl"><TbCubePlus /></button>
+              </Link>
 
-          {!isInitialized && <FaSpinner className="spinner" />}
-          {isInitialized && (
-            <>
-              {selectedAccount ? (
-                <div className="relative flex items-center rounded-full shadow py-2">
-                  <button className="flex items-center cursor-pointer">
-                    <FaWallet size={24} className="text-purple" />
-                    <span className="ml-2 font-mono">
-                      {truncateWalletAddress(selectedAccount.address)}
-                    </span>
+            </div>
+
+            <Link href="https://explorer.comwallet.io/" target='_blank'>
+                <button className="btn btn-ghost p-2"><MdOutlineTravelExplore size={28} /></button>
+              </Link>
+              {!isInitialized && <FaSpinner className="spinner" />}
+            {isInitialized && (
+              <>
+                {selectedAccount ? (
+                  <div className="relative flex items-center rounded-full shadow py-2">
+                    <button className="flex items-center cursor-pointer">
+                      <FaWallet size={24} className="text-purple" />
+                      <span className="ml-2 font-mono">
+                        {truncateWalletAddress(selectedAccount.address)}
+                      </span>
+                    </button>
+                  </div>
+                ) : (
+                  <button onClick={handleConnect} disabled={!isInitialized} className="btn btn-ghost text-xl">
+                    <Image
+                      width={35}
+                      height={35}
+                      className="cursor-pointer"
+                      alt="Tailwind CSS Navbar component"
+                      src="https://avatars.githubusercontent.com/u/33775474?s=200&v=4"
+                    />
+                    <span><p>connect</p></span>
+
                   </button>
-                </div>
-              ) : (
-                <button disabled={!isInitialized}>
-                  <Image
-                    width={35}
-                    height={35}
-                    onClick={handleConnect}
-                    className="cursor-pointer"
-                    alt="Tailwind CSS Navbar component"
-                    src="https://avatars.githubusercontent.com/u/33775474?s=200&v=4"
-                  />
-                </button>
-              )}
-            </>
-          )}
+                )}
+              </>
+            )}
+            
+          </div>
+
         </div>
+
+
       </div>
-    </div>
-  )
+        <div className={classnames('divider justify-center flex', {
+          'divider-warning': isInitialized && isConnected,
+          'divider-accent': isInitialized && !isConnected,
+          'divider-neutral': !isInitialized
+        })}>
+          <Link href="https://www.communeai.org/" target="_blank"><p>powered by
+            <Image
+              width={130}
+              height={130}
+              className="cursor-pointer"
+              alt="ComHub - module marketplace"
+              src="https://www.communeai.org/gif/logo/CubesShufflingGIF.gif"
+              unoptimized
+            />
+          </p></Link>
+        </div>
+      </>
+      )
 }
 
-export default Navbar
+      export default Navbar
