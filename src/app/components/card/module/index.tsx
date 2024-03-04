@@ -37,7 +37,7 @@ const ModuleCard = ({ url, name, image, description, validatorKey, verified, tag
           </div>
           <Link href={url} target="_blank">
 
-            <div className="justify-center card-title">{name}<MdVerified className={`${verified ? 'text-blue-500' : 'hidden'}`} /></div>
+            <div className="justify-center card-title">{name}<MdVerified className={`${!verified ? 'hidden' : verified && name === 'ComHub' ? 'text-yellow-500' : 'text-blue-500'}`} /></div>
             <div className="flex justify-center px-4 py-16 bg-base-200">
               <div className="relative min-h-40 min-w-40">
                 <Image fill src={image} alt="module-image" />
