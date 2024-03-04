@@ -20,3 +20,13 @@ Example:
   }
 
 Once approved, your module will be made immediately available via comhub.app!
+
+Use this template:    
+{
+        "name": "",
+        "url": "",
+        "image": "",
+        "description": "",
+        "validatorKey": "",
+        "tags": ["", ""],
+  }
