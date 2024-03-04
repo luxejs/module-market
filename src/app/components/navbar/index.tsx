@@ -90,14 +90,14 @@ const Navbar = () => {
                 className="input input-bordered min-w-80 pr-10" // Add padding to the right to make space for the plus button
               />
               {/* <button className="absolute right-2 top-1/2 transform -translate-y-1/2">+</button> */}
-              <Link href="https://github.com/luxejs/comhub-app/issues/new" target='_blank'>
+              <Link href="https://github.com/luxejs/comhub-app/issues/new?assignees=&labels=&projects=&template=request-commune-ai-module-to-be-added-to-comhub-app.md&title=%5BMODULE+REQUEST%5D" target='_blank'>
                 <button className="absolute right-2 top-1/2 transform -translate-y-1/2 btn btn-ghost text-xl"><TbCubePlus /></button>
               </Link>
 
             </div>
 
             <Link href="https://explorer.comwallet.io/" target='_blank'>
-                <button className="btn btn-ghost p-2 text-orange-400"><MdOutlineTravelExplore size={28} /></button>
+                <button className="btn btn-ghost p-2  hover:text-orange-400"><MdOutlineTravelExplore size={28} /></button>
               </Link>
               {!isInitialized && <FaSpinner className="spinner" />}
             {isInitialized && (
