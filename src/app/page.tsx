@@ -15,6 +15,9 @@ export default function Home() {
               description={item.description}
               image={item.image}
               url={item.url}
+              validatorKey={item.validatorKey}
+              verified={item.verified}
+              tags={item.tags}
             />
           ))}
         </div>
