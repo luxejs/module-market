@@ -44,10 +44,11 @@ const ModuleCard = ({ url, name, image, description, validatorKey, verified, tag
             {tags.map((tag) => (
               <div key={tag} className={classnames('badge', 'badge-outline', {
                 'badge-accent': tag === 'stats',
-                'badge-primary': tag === 'staking',
+                'badge-primary': tag === 'staking' || tag === 'bridge',
                 'badge-secondary': tag === 'wallet',
                 'badge-success': tag === 'AI',
                 'badge-warning': tag === 'chat' || tag === 'GPT',
+                
 
 
               })}>{tag}</div>
