@@ -82,7 +82,7 @@ const ModuleCard = ({ url, name, image, description, validatorKey, verified, tag
               <div className="card-actions justify-center mt-4">
                 <select
                   disabled={!isConnected || disabled}
-                  className="select select-bordered w-full max-w-xs"
+                  className="select select-bordered w-full"
                   value={selectedAmount}
                   onChange={handleAmountChange}
                 >
@@ -93,7 +93,7 @@ const ModuleCard = ({ url, name, image, description, validatorKey, verified, tag
                   <option value="1000">1000</option>
                   <option value="10000">10000</option>
                 </select>
-                <div className="flex flex-col w-full lg:flex-row">
+                <div className="flex flex-col w-full lg:flex-row justify-center">
                   <div className="grid flex-grow h-12 card bg-base-300 rounded-box place-items-center">
                     {<button disabled={!isConnected || disabled} onClick={() => { addStake({ validator: validatorKey, amount: String(selectedAmount) }) }} className="btn btn-primary w-full" >{isConnected ? 'stake' : 'connect to stake'}</button>}
                   </div>
