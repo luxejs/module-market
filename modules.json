@@ -3,30 +3,37 @@
         "name": "ComStats",
         "url": "https://comstats.org/",
         "image": "https://www.comstats.org/_next/image?url=%2FAnimated1.gif&w=384&q=75",
-        "description": "All Statistics of CommuneAI at one place. Staking infrastructure, prices, validators, miners, swap, bridge, exchange for $COMAI."
+        "description": "All Statistics of CommuneAI at one place. Staking infrastructure, prices, validators, miners, swap, bridge, exchange for $COMAI.",
+        "validatorKey": "5H9YPS9FJX6nbFXkm9zVhoySJBX9RRfWF36abisNz5Ps9YaX",
+        "verified": true,
+        "tags": ["stats", "staking", "wallet"]
     },
     {
         "name": "ComChat",
         "url": "https://comchat.io/",
         "image": "https://comchat.io/icons/favicon-32x32.png",
-        "description": "LLM GPT aggregator built on COMAI"
+        "description": "LLM GPT aggregator built on COMAI",
+        "validatorKey": "5D4o6H19z6ctWjS9HzxBpMxqhuzCCCsgXk49AqXGPUqZEpRt",
+        "verified": true,
+        "tags": ["GPT", "chat", "AI"]
+
     },
     {
         "name": "ComSwap",
         "url": "https://comswap.io/",
         "image": "https://comswap.io/static/media/logo.0eafc56c200101eecb87.png",
-        "description": "OTC $COMAI exchange"
+        "description": "OTC $COMAI exchange",
+        "validatorKey": "5CXiWwsS76H2vwroWu4SvdAS3kxprb7aFtqWLxxZC5FNhYri",
+        "verified": true,
+        "tags": ["staking", "wallet"]
     },
     {
-        "name": "ComWallet",
+        "name": "ComWallet by ComSwap",
         "url": "https://comwallet.io/",
         "image": "https://comwallet.io/logo.svg",
-        "description": "Wallet for $COMAI"
-    },
-    {
-        "name": "WebZero.events",
-        "url": "https://webzero.events/",
-        "image": "/images/webzero.png",
-        "description": "Web3 events app powered by WebZero to connect to DAOs and community-staking to fund workshops and events."
+        "description": "Wallet for $COMAI",
+        "validatorKey": "5CXiWwsS76H2vwroWu4SvdAS3kxprb7aFtqWLxxZC5FNhYri",
+        "verified": true,
+        "tags": ["staking", "wallet"]
     }
 ]
