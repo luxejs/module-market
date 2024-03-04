@@ -44,13 +44,12 @@ const ModuleCard = ({ url, name, image, description, validatorKey, verified, tag
             {tags.map((tag) => (
               <div key={tag} className={classnames('badge', 'badge-outline', {
                 'badge-accent': tag === 'stats',
-                'badge-primary': tag === 'staking' || tag === 'bridge',
+                'badge-primary': tag === 'staking',
+                'badge-info' : tag === 'bridge',
                 'badge-secondary': tag === 'wallet',
                 'badge-success': tag === 'AI',
-                'badge-warning': tag === 'chat' || tag === 'GPT',
-                
-
-
+                'badge-warning': tag === 'chat' || tag === 'GPT' || tag === "hub",
+                'badge-default' : tag === 'com',
               })}>{tag}</div>
             ))}
 
@@ -58,9 +57,8 @@ const ModuleCard = ({ url, name, image, description, validatorKey, verified, tag
 
           <div role="alert" className="alert">
 
-            <div className="card-text line-clamp-5 font-500 h-16">
+            <div className="card-text font-500 h-6">
               {description}
-
             </div>
 
           </div>
