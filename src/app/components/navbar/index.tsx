@@ -30,6 +30,7 @@ import {
 
 } from "react-icons/fa"
 import { TbCubePlus } from "react-icons/tb";
+import { MdOutlineTravelExplore } from "react-icons/md";
 
 const Navbar = () => {
   const { isInitialized, handleConnect, isConnected, selectedAccount } = usePolkadot()
@@ -95,7 +96,10 @@ const Navbar = () => {
 
             </div>
 
-            {!isInitialized && <FaSpinner className="spinner" />}
+            <Link href="https://explorer.comwallet.io/" target='_blank'>
+                <button className="btn btn-ghost p-2"><MdOutlineTravelExplore size={28} /></button>
+              </Link>
+              {!isInitialized && <FaSpinner className="spinner" />}
             {isInitialized && (
               <>
                 {selectedAccount ? (
@@ -122,7 +126,9 @@ const Navbar = () => {
                 )}
               </>
             )}
+            
           </div>
+
         </div>
 
 
