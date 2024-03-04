@@ -19,7 +19,7 @@ interface ModuleCardInterface {
   disabled: boolean
 }
 const ModuleCard = ({ url, name, image, description, validatorKey, verified, tags, disabled }: ModuleCardInterface) => {
-  const { isConnected, addStake, removeStake } = usePolkadot()
+  const { isInitialized, isConnected, addStake, removeStake } = usePolkadot()
   const [selectedAmount, setSelectedAmount] = useState(); // Default selected value
 
   const handleAmountChange = (event: any) => {
@@ -67,44 +67,50 @@ const ModuleCard = ({ url, name, image, description, validatorKey, verified, tag
             <div role="alert" className="alert">
 
               <div className="card-text font-500 h-3">
-              {description}
+                {description}
               </div>
 
             </div>
-            <div className="divider divider-neutral mt-4 mb-0">stake </div>
-            <p className="text-xs text-slate-600">{validatorKey}</p>
-            <div className="card-actions justify-center mt-4">
-              <select
-                disabled={!isConnected || disabled}
-                className="select select-bordered w-full max-w-xs"
-                value={selectedAmount}
-                onChange={handleAmountChange}
-              >
-                <option disabled selected>{`${isConnected ? 'select $COMAI amount' : 'connect to select $COMAI amount'}`}</option>
-                <option value="1">1</option>
-                <option value="10">10</option>
-                <option value="100">100</option>
-                <option value="1000">1000</option>
-                <option value="10000">10000</option>
-              </select>
-              <div className="flex flex-col w-full lg:flex-row">
-                <div className="grid flex-grow h-12 card bg-base-300 rounded-box place-items-center">
-                  {<button disabled={!isConnected || disabled} onClick={() => { addStake({ validator: validatorKey, amount: String(selectedAmount) }) }} className="btn btn-primary w-full" >{isConnected ? 'stake' : 'connect to stake'}</button>}
-                </div>
-                <div className="divider lg:divider-horizontal py-0">or</div>
+            {/* <div className="divider divider-neutral mt-4 mb-0">stake </div> */}
+            <div className={classnames('divider justify-center flex mt-4 mb-0', {
+              'divider-neutral': !isInitialized || disabled,
+              'divider-accent': isInitialized && !isConnected,
+              'divider-warning': isInitialized && isConnected
 
-                <div className="grid flex-grow h-12 card bg-base-300 rounded-box place-items-center">
-                  {<button disabled={!isConnected || disabled} onClick={() => { removeStake({ validator: validatorKey, amount: String(selectedAmount) }) }} className="btn btn-error w-full" >{isConnected ? 'unstake' : 'connect to unstake'}</button>}
+            })}>stake</div>
+              <p className="text-xs text-slate-600">{validatorKey}</p>
+              <div className="card-actions justify-center mt-4">
+                <select
+                  disabled={!isConnected || disabled}
+                  className="select select-bordered w-full max-w-xs"
+                  value={selectedAmount}
+                  onChange={handleAmountChange}
+                >
+                  <option disabled selected>{`${isConnected ? 'select $COMAI amount' : 'connect to select $COMAI amount'}`}</option>
+                  <option value="1">1</option>
+                  <option value="10">10</option>
+                  <option value="100">100</option>
+                  <option value="1000">1000</option>
+                  <option value="10000">10000</option>
+                </select>
+                <div className="flex flex-col w-full lg:flex-row">
+                  <div className="grid flex-grow h-12 card bg-base-300 rounded-box place-items-center">
+                    {<button disabled={!isConnected || disabled} onClick={() => { addStake({ validator: validatorKey, amount: String(selectedAmount) }) }} className="btn btn-primary w-full" >{isConnected ? 'stake' : 'connect to stake'}</button>}
+                  </div>
+                  <div className="divider lg:divider-horizontal py-0">or</div>
+
+                  <div className="grid flex-grow h-12 card bg-base-300 rounded-box place-items-center">
+                    {<button disabled={!isConnected || disabled} onClick={() => { removeStake({ validator: validatorKey, amount: String(selectedAmount) }) }} className="btn btn-error w-full" >{isConnected ? 'unstake' : 'connect to unstake'}</button>}
+                  </div>
+
                 </div>
 
               </div>
-
             </div>
           </div>
         </div>
-      </div>
-    </>
-  )
+      </>
+      )
 }
 
-export default ModuleCard
+      export default ModuleCard
