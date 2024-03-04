@@ -2,7 +2,7 @@
     {
         "name": "ComHub",
         "url": "https://comhub.app/",
-        "image": "/images/comai-logo.png",
+        "image": "https://comwallet.io/logo.svg",
         "description": "Marketplace for Commune Ai modules",
         "validatorKey": "5EJ9AUpSGafWeagdP5nwc5AwcYBkagYSZyx2BmLKWJrGBZUZ",
         "verified": true,
