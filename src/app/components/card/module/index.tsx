@@ -7,6 +7,7 @@ import { usePolkadot } from "@/src/context"
 import { MdVerified } from "react-icons/md";
 
 import classnames from 'classnames';
+import AnimatedModule from "../../animatedModule";
 
 interface ModuleCardInterface {
   url: string
@@ -45,6 +46,7 @@ const ModuleCard = ({ url, name, image, description, validatorKey, verified, tag
             <div className="flex justify-center px-4 py-16 bg-base-200">
               <div className="relative min-h-40 min-w-40">
                 <Image fill src={image} alt="module-image" />
+                {/* <AnimatedModule src={image}/> */}
               </div>
             </div>
           </Link>
@@ -84,6 +86,9 @@ const ModuleCard = ({ url, name, image, description, validatorKey, verified, tag
             })}>stake</div>
             <p className="text-xs text-slate-600">{validatorKey}</p>
             <div className="card-actions justify-center mt-4">
+            <div className="label">
+    <span className="label-text-alt">BITCONNECTING DEVS & USERS</span>
+  </div>
               <select
                 disabled={!isConnected || disabled}
                 className="select select-bordered w-full"
