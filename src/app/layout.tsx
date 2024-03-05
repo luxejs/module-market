@@ -2,23 +2,22 @@ import type { Metadata } from "next"
 import Providers from "@/src/app/provider"
 import "react-responsive-modal/styles.css"
 import "@/src/app/globals.css"
-
-export const metadata: Metadata = {
-  title: "ComHub",
-  description: "ComHub - the hub for Commune Ai modules.",
-  icons: [{ rel: 'icon', url: '/images/favicon.ico' }]
-}
+import Head from "next/head";
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
-        <Providers>{children}</Providers>
-      </body>
-    </html>
-  )
+    <>
+      <Head>
+        <title>ComHub</title>
+        <meta name="description" content="ComHub - the hub for Commune Ai modules." />
+        <link rel="icon" href="/images/favicon.ico" />
+        <html lang="en" />
+      </Head>
+      <Providers>{children}</Providers>
+    </>
+  );
 }
