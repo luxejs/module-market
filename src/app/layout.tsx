@@ -20,7 +20,7 @@ export default function RootLayout({
       <Head>
         <title>ComHub</title>
         <meta name="description" content="ComHub - the hub for Commune Ai modules." />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/images/favicon.ico" />
         <html lang="en" />
       </Head>
       <body>
