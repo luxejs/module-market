@@ -43,12 +43,12 @@ const Navbar = () => {
             <Link href="https://www.comhub.app/">
               <button className="btn btn-ghost text-xl">
                 <Image
-                  width={130}
-                  height={130}
+                  width={35}
+                  height={35}
                   // onClick={handleConnect}
                   className="cursor-pointer"
                   alt="ComHub - module marketplace"
-                  src="/images/comhub-logo.png"
+                  src="/images/comai-logo.png"
                 />
               </button>
             </Link>
@@ -141,12 +141,13 @@ const Navbar = () => {
         })}>
           <Link href="https://www.communeai.org/" target="_blank"><p>powered by
             <Image
-              width={130}
-              height={130}
-              className="cursor-pointer"
+              width={60}
+              height={60}
+              className="cursor-pointer relative ml-4"
               alt="ComHub - module marketplace"
-              src="https://www.communeai.org/gif/logo/CubesShufflingGIF.gif"
+              src="/images/commune-gif.gif"
               unoptimized
+              
             />
           </p></Link>
         </div>
