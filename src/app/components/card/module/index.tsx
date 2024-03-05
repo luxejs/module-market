@@ -20,7 +20,7 @@ interface ModuleCardInterface {
 }
 const ModuleCard = ({ url, name, image, description, validatorKey, verified, tags, disabled }: ModuleCardInterface) => {
   const { isInitialized, isConnected, addStake, removeStake } = usePolkadot()
-  const [selectedAmount, setSelectedAmount] = useState(); // Default selected value
+  const [selectedAmount, setSelectedAmount] = useState('1'); // Default selected value
 
   const handleAmountChange = (event: any) => {
     setSelectedAmount(event.target.value)
