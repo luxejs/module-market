@@ -40,7 +40,7 @@ const Navbar = () => {
       <div className="container">
         <div className="navbar bg-transparent justify-between">
           <div className="flex gap-x-3">
-            <Link href="/">
+            <Link href="https://www.comhub.app/">
               <button className="btn btn-ghost text-xl">
                 <Image
                   width={130}
