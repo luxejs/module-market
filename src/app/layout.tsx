@@ -4,11 +4,11 @@ import "react-responsive-modal/styles.css"
 import "@/src/app/globals.css"
 import Head from "next/head";
 
-export const metadata: Metadata = {
-  title: "ComHub",
-  description: "ComHub - the hub for Commune Ai modules.",
-  icons: [{ rel: 'icon', url: '/favicon.ico' }]
-}
+// export const metadata: Metadata = {
+//   title: "ComHub",
+//   description: "ComHub - the hub for Commune Ai modules.",
+//   icons: [{ rel: 'icon', url: '/favicon.ico' }]
+// }
 
 export default function RootLayout({
   children,
