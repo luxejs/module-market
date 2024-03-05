@@ -7,7 +7,7 @@
         "validatorKey": "5EJ9AUpSGafWeagdP5nwc5AwcYBkagYSZyx2BmLKWJrGBZUZ",
         "verified": true,
         "tags": ["com","hub"],
-        "disabled": true
+        "disabled": false
     },
     {
         "name": "ComStats",
