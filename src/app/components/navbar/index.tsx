@@ -38,7 +38,7 @@ const Navbar = () => {
   return (
     <>
       <div className="container">
-        <div className="navbar bg-transparent justify-between">
+        <div className="navbar bg-transparent justify-between p-0">
           <div className="flex gap-x-3">
             <Link href="https://www.comhub.app/">
               <button className="btn btn-ghost text-xl">

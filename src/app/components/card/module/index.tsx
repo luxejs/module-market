@@ -70,7 +70,7 @@ const ModuleCard = ({ url, name, image, description, validatorKey, verified, tag
 
             <div role="alert" className="alert">
 
-              <div className="card-text font-500 h-3">
+              <div className="card-text font-500">
                 {description}
               </div>
 
