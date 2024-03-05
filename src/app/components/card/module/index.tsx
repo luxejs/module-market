@@ -90,7 +90,7 @@ const ModuleCard = ({ url, name, image, description, validatorKey, verified, tag
                 value={selectedAmount}
                 onChange={handleAmountChange}
               >
-                <option disabled selected>{`${isConnected ? 'select $COMAI amount' : 'connect to select $COMAI amount'}`}</option>
+                {/* <option disabled selected>{`${isConnected ? 'select $COMAI amount' : 'connect to select $COMAI amount'}`}</option> */}
                 <option value="1">1 $COMAI</option>
                 <option value="10">10 $COMAI</option>
                 <option value="100">100 $COMAI</option>
