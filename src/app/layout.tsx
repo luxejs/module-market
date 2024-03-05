@@ -5,7 +5,7 @@ import "@/src/app/globals.css"
 
 export const metadata: Metadata = {
   title: "ComHub",
-  description: "A marketplace for Commune-AI Modules",
+  description: "ComHub - the hub for commune ai modules",
 }
 
 export default function RootLayout({

@@ -47,7 +47,7 @@ const Navbar = () => {
                   height={35}
                   // onClick={handleConnect}
                   className="cursor-pointer"
-                  alt="ComHub - module marketplace"
+                  alt="ComHub - the hub for commune ai modules"
                   src="/images/comai-logo.png"
                 />
               </button>
@@ -146,8 +146,8 @@ const Navbar = () => {
               width={60}
               height={60}
               className="cursor-pointer relative ml-4"
-              alt="ComHub - module marketplace"
-              src="/images/commune-gif.gif"
+              alt="ComHub - the hub for commune ai modules"
+              src="/images/comai-webp.webp"
               unoptimized
               
             />
