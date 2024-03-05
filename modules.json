@@ -63,17 +63,6 @@
         "tags": ["bridge", "wallet"],
         "disabled": false
 
-    },
-    {
-        "name": "WebZero Events",
-        "url": "https://webzero.events/",
-        "image": "/images/webzero-logo.png",
-        "description": "Funding web3 events and workshops",
-        "validatorKey": "5Dkz6iet2LQsUh2K3bdzoRyUYHkgd1hKFNGT5rcY4e82y5cV",
-        "verified": false,
-        "tags": ["events", "coming soon"],
-        "disabled": true
-
     }
 
 ]
