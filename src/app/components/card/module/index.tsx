@@ -37,7 +37,11 @@ const ModuleCard = ({ url, name, image, description, validatorKey, verified, tag
           </div>
           <Link href={url} target="_blank">
 
-            <div className="justify-center card-title">{name}<MdVerified className={`${!verified ? 'hidden' : verified && name === 'ComHub' ? 'text-yellow-500' : 'text-blue-500'}`} /></div>
+            <div className="justify-center card-title">{name}
+            <div className="tooltip tooltip-top" data-tip="verified">
+              <MdVerified className={`${!verified ? 'hidden' : verified && name === 'ComHub' ? 'text-yellow-500' : 'text-blue-500'}`} />
+              </div>
+            </div>
             <div className="flex justify-center px-4 py-16 bg-base-200">
               <div className="relative min-h-40 min-w-40">
                 <Image fill src={image} alt="module-image" />
@@ -78,42 +82,42 @@ const ModuleCard = ({ url, name, image, description, validatorKey, verified, tag
               'divider-warning': isInitialized && isConnected
 
             })}>stake</div>
-              <p className="text-xs text-slate-600">{validatorKey}</p>
-              <div className="card-actions justify-center mt-4">
-                <select
-                  disabled={!isConnected || disabled}
-                  className="select select-bordered w-full"
-                  value={selectedAmount}
-                  onChange={handleAmountChange}
-                >
-                  <option disabled selected>{`${isConnected ? 'select $COMAI amount' : 'connect to select $COMAI amount'}`}</option>
-                  <option value="1">1</option>
-                  <option value="10">10</option>
-                  <option value="100">100</option>
-                  <option value="1000">1,000</option>
-                  <option value="10000">10,000</option>
-                  <option value="100000">100,000</option>
-                  <option value="1000000">1,000,000</option>
+            <p className="text-xs text-slate-600">{validatorKey}</p>
+            <div className="card-actions justify-center mt-4">
+              <select
+                disabled={!isConnected || disabled}
+                className="select select-bordered w-full"
+                value={selectedAmount}
+                onChange={handleAmountChange}
+              >
+                <option disabled selected>{`${isConnected ? 'select $COMAI amount' : 'connect to select $COMAI amount'}`}</option>
+                <option value="1">1 $COMAI</option>
+                <option value="10">10 $COMAI</option>
+                <option value="100">100 $COMAI</option>
+                <option value="1000">1,000 $COMAI</option>
+                <option value="10000">10,000 $COMAI</option>
+                <option value="100000">100,000 $COMAI</option>
+                <option value="1000000">1,000,000 $COMAI</option>
 
-                </select>
-                <div className="flex flex-col w-full lg:flex-row justify-center">
-                  <div className="grid flex-grow h-12 card bg-base-300 rounded-box place-items-center">
-                    {<button disabled={!isConnected || disabled} onClick={() => { addStake({ validator: validatorKey, amount: String(selectedAmount) }) }} className="btn btn-primary w-full" >{isConnected ? 'stake' : 'connect to stake'}</button>}
-                  </div>
-                  <div className="divider lg:divider-horizontal py-0">or</div>
+              </select>
+              <div className="flex flex-col w-full lg:flex-row justify-center">
+                <div className="grid flex-grow h-12 card bg-base-300 rounded-box place-items-center">
+                  {<button disabled={!isConnected || disabled} onClick={() => { addStake({ validator: validatorKey, amount: String(selectedAmount) }) }} className="btn btn-primary w-full" >{isConnected ? 'stake' : 'connect to stake'}</button>}
+                </div>
+                <div className="divider lg:divider-horizontal py-0">or</div>
 
-                  <div className="grid flex-grow h-12 card bg-base-300 rounded-box place-items-center">
-                    {<button disabled={!isConnected || disabled} onClick={() => { removeStake({ validator: validatorKey, amount: String(selectedAmount) }) }} className="btn btn-error w-full" >{isConnected ? 'unstake' : 'connect to unstake'}</button>}
-                  </div>
-
+                <div className="grid flex-grow h-12 card bg-base-300 rounded-box place-items-center">
+                  {<button disabled={!isConnected || disabled} onClick={() => { removeStake({ validator: validatorKey, amount: String(selectedAmount) }) }} className="btn btn-error w-full" >{isConnected ? 'unstake' : 'connect to unstake'}</button>}
                 </div>
 
               </div>
+
             </div>
           </div>
         </div>
-      </>
-      )
+      </div>
+    </>
+  )
 }
 
-      export default ModuleCard
+export default ModuleCard

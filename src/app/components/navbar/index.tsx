@@ -139,7 +139,9 @@ const Navbar = () => {
           'divider-accent': isInitialized && !isConnected,
           'divider-neutral': !isInitialized
         })}>
-          <Link href="https://www.communeai.org/" target="_blank"><p>powered by
+
+{/*  */}
+          <Link className="transition duration-300 ease-in-out hover:scale-150 z-50" href="https://www.communeai.org/" target="_blank"><p>powered by
             <Image
               width={60}
               height={60}
