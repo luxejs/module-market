@@ -12,7 +12,7 @@
     {
         "name": "ComStats",
         "url": "https://comstats.org/",
-        "image": "https://www.comstats.org/_next/image?url=%2FAnimated1.gif&w=384&q=75",
+        "image": "/images/comstats-webp.webp",
         "description": "All statistics of Commune Ai in one place",
         "validatorKey": "5H9YPS9FJX6nbFXkm9zVhoySJBX9RRfWF36abisNz5Ps9YaX",
         "verified": true,
