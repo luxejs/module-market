@@ -90,8 +90,11 @@ const ModuleCard = ({ url, name, image, description, validatorKey, verified, tag
                   <option value="1">1</option>
                   <option value="10">10</option>
                   <option value="100">100</option>
-                  <option value="1000">1000</option>
-                  <option value="10000">10000</option>
+                  <option value="1000">1,000</option>
+                  <option value="10000">10,000</option>
+                  <option value="100000">100,000</option>
+                  <option value="1000000">1,000,000</option>
+
                 </select>
                 <div className="flex flex-col w-full lg:flex-row justify-center">
                   <div className="grid flex-grow h-12 card bg-base-300 rounded-box place-items-center">
