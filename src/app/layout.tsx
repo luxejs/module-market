@@ -5,7 +5,7 @@ import "@/src/app/globals.css"
 
 export const metadata: Metadata = {
   title: "ComHub",
-  description: "ComHub - the hub for Commune Ai modules",
+  description: "ComHub - the hub for Commune Ai modules.",
   icons: [{ rel: 'icon', url: '/images/favicon.ico' }]
 }
 
