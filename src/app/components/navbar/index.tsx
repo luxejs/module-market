@@ -75,7 +75,7 @@ const Navbar = () => {
           <Ticker />
 
           <div className="flex gap-x-3">
-            <Link href="https://github.com/luxejs/comhub-app" target="_blank">
+            <Link href="https://github.com/commune-ai/comhub-app" target="_blank">
               <button className="btn btn-ghost p-2"><FaGithub size={30} /></button>
             </Link>
             {/* <input
