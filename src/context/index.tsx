@@ -108,7 +108,7 @@ export const PolkadotProvider: React.FC<PolkadotProviderProps> = ({
         signer: injector.signer,
       })
       .then((response) => {
-        successToast("Transaction Done")
+        successToast("Transaction Submitted")
         callback?.()
       })
       .catch((err) => {
@@ -125,7 +125,7 @@ export const PolkadotProvider: React.FC<PolkadotProviderProps> = ({
         signer: injector.signer,
       })
       .then((response) => {
-        successToast("Transaction Done")
+        successToast("Transaction Submitted")
         callback?.()
       })
       .catch((err) => {
@@ -147,7 +147,7 @@ export const PolkadotProvider: React.FC<PolkadotProviderProps> = ({
         signer: injector.signer,
       })
       .then(() => {
-        successToast("Transaction Done")
+        successToast("Transaction Submitted")
         callback?.()
       })
       .catch((err) => {
@@ -170,7 +170,7 @@ export const PolkadotProvider: React.FC<PolkadotProviderProps> = ({
         },
       )
       .then(() => {
-        successToast("Transaction Done")
+        successToast("Transaction Submitted")
         callback?.()
       })
       .catch((err) => {
