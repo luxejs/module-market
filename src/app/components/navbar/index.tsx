@@ -27,7 +27,28 @@ const Navbar = () => {
     <>
       <div className="container">
         <div className="navbar bg-transparent justify-between p-0">
-          <div className="flex gap-x-3">
+          <div className="dropdown">
+            <div tabIndex={0} role="button" className="btn btn-ghost md:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+              socials
+            </div>
+            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+              <li><Link href="https://discord.gg/communeai" target="_blank">
+                <button className="btn "><FaDiscord size={30} /> Discord</button>
+              </Link></li>
+              <li><Link href="https://twitter.com/communeaidotorg" target="_blank">
+              <button className="btn "><FaTwitter size={30} /> Twitter</button>
+            </Link></li>
+            <li><Link href="https://t.me/communecommunity" target="_blank">
+              <button className="btn "><FaTelegram size={30} /> Telegram</button>
+            </Link></li>
+            <li><Link href="https://www.youtube.com/@omnipotentlabs" target="_blank">
+              <button className="btn "><FaYoutube size={30} /> Youtube</button>
+            </Link></li>
+            </ul>
+          </div>
+          <div className="hidden md:flex gap-x-3">
+
             <Link href="/">
               <button className="btn btn-ghost text-xl">
                 <Image
@@ -119,7 +140,7 @@ const Navbar = () => {
                       alt="Tailwind CSS Navbar component"
                       src="https://avatars.githubusercontent.com/u/33775474?s=200&v=4"
                     />
-                    <span><p>connect</p></span>
+                    <span className="hidden md:block"><p>connect</p></span>
 
                   </button>
                 )}
