@@ -37,7 +37,7 @@ const Navbar = () => {
                   alt="ComHub - the hub for commune ai modules"
                   src="/images/comai-logo.png"
                 />
-            <p className="text-lg">socials</p>
+            <p className="text-md">socials</p>
             </div>
             <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
               <li><Link href="https://discord.gg/communeai" target="_blank">
