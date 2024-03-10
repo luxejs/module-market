@@ -45,6 +45,11 @@ const Navbar = () => {
             <li><Link href="https://www.youtube.com/@omnipotentlabs" target="_blank">
               <button className="btn "><FaYoutube size={30} /> Youtube</button>
             </Link></li>
+            <li>
+            <Link href="https://github.com/commune-ai/comhub-app" target="_blank">
+              <button className="btn"><FaGithub size={30} />GitHub</button>
+            </Link>
+            </li>
             </ul>
           </div>
           <div className="hidden md:flex gap-x-3">
@@ -95,7 +100,7 @@ const Navbar = () => {
 
           <div className="flex gap-x-3">
             <Link href="https://github.com/commune-ai/comhub-app" target="_blank">
-              <button className="btn btn-ghost p-2"><FaGithub size={30} /></button>
+              <button className="btn btn-ghost p-2 hidden md:block"><FaGithub size={30} /></button>
             </Link>
             {/* <input
             type="text"
