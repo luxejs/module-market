@@ -28,7 +28,7 @@ const Navbar = () => {
       <div className="container">
         <div className="navbar bg-transparent justify-between p-0">
           <div className="flex gap-x-3">
-            <Link href="https://www.comhub.app/">
+            <Link href="/">
               <button className="btn btn-ghost text-xl">
                 <Image
                   width={45}
@@ -40,8 +40,18 @@ const Navbar = () => {
                 />
               </button>
             </Link>
+            {/* <div className="flex">
+            <div className="indicator">
+              <span className="indicator-item badge badge-error"></span>
+              <Link href="/vote">
+                <button className="btn btn-ghost text-xl text-yellow-200">/vote</button>
+              </Link>
+            </div>
 
-            <p>socials</p>
+            <Link href="https://comhub.app/about" target="_blank">
+              <button className="btn btn-ghost text-xl text-emerald-400 p-1">/about</button>
+            </Link>
+            </div> */}
             <Link href="https://discord.gg/communeai" target="_blank">
               <button className="btn btn-ghost p-1"><FaDiscord size={30} /></button>
             </Link>
@@ -71,7 +81,7 @@ const Navbar = () => {
             placeholder="Search Modules"
             className="input input-bordered min-w-80"
           /> */}
-            <div className="relative">
+            <div className="hidden lg:block relative">
               <input
                 type="text"
                 placeholder="Module search coming soon..."
@@ -86,9 +96,9 @@ const Navbar = () => {
             </div>
 
             <Link href="https://explorer.comwallet.io/" target='_blank'>
-                <button className="btn btn-ghost p-2  hover:text-orange-400"><MdOutlineTravelExplore size={28} /></button>
-              </Link>
-              {!isInitialized && <FaSpinner className="spinner" />}
+              <button className="btn btn-ghost p-2  hover:text-orange-400"><MdOutlineTravelExplore size={28} /></button>
+            </Link>
+            {!isInitialized && <FaSpinner className="spinner" />}
             {isInitialized && (
               <>
                 {selectedAccount ? (
@@ -115,34 +125,34 @@ const Navbar = () => {
                 )}
               </>
             )}
-            
+
           </div>
 
         </div>
 
 
       </div>
-        <div className={classnames('divider justify-center flex', {
-          'divider-warning': isInitialized && isConnected,
-          'divider-accent': isInitialized && !isConnected,
-          'divider-neutral': !isInitialized
-        })}>
+      <div className={classnames('divider justify-center flex', {
+        'divider-warning': isInitialized && isConnected,
+        'divider-accent': isInitialized && !isConnected,
+        'divider-neutral': !isInitialized
+      })}>
 
-{/*  */}
-          <Link className="transition duration-300 ease-in-out hover:scale-150 z-50" href="https://www.communeai.org/" target="_blank"><p>powered by
-            <Image
-              width={60}
-              height={60}
-              className="cursor-pointer relative ml-4"
-              alt="ComHub - the hub for commune ai modules"
-              src="/images/comai-webp.webp"
-              unoptimized
-              
-            />
-          </p></Link>
-        </div>
-      </>
-      )
+        {/*  */}
+        <Link className="transition duration-300 ease-in-out hover:scale-150 z-50" href="https://www.communeai.org/" target="_blank"><p>powered by
+          <Image
+            width={60}
+            height={60}
+            className="cursor-pointer relative ml-4"
+            alt="ComHub - the hub for commune ai modules"
+            src="/images/comai-webp.webp"
+            unoptimized
+
+          />
+        </p></Link>
+      </div>
+    </>
+  )
 }
 
-      export default Navbar
+export default Navbar
