@@ -1,6 +1,6 @@
 import modulesData from "@/modules.json"
-import ModuleCard from "@/src/app/components/card/module"
-import Navbar from "./components/navbar"
+import ModuleCard from "../components/card/module"
+import Navbar from "../components/navbar"
 
 export default function Home() {
   return (
