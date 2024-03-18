@@ -11,6 +11,7 @@ export async function GET(request: Request) {
                 'Content-Type': 'application/json',
                 'X-CMC_PRO_API_KEY': process.env.CMC_API_KEY!,
             },
+            cache: 'no-store',
         });
 
         if (!response.ok) {
