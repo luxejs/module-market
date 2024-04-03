@@ -10,7 +10,7 @@ export async function GET(request: Request) {
             headers: {
                 'Content-Type': 'application/json',
                 'X-CMC_PRO_API_KEY': process.env.CMC_API_KEY!,
-                'Cache-Control': 'no-cache, no-store, must-revalidate',
+                // 'Cache-Control': 'no-cache, no-store, must-revalidate',
             },
             // cache: 'no-store',
         });
@@ -30,7 +30,7 @@ export async function GET(request: Request) {
         return new Response(JSON.stringify({ price, percentChange }), {
             headers: {
                 'Content-Type': 'application/json',
-                'Cache-Control': 's-maxage=60, stale-while-revalidate',
+                'Cache-Control': 'no-cache',
             },
         });
     } catch (error) {
