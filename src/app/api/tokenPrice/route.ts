@@ -12,7 +12,7 @@ export async function GET(request: Request) {
                 'X-CMC_PRO_API_KEY': process.env.CMC_API_KEY!,
                 // 'Cache-Control': 'no-cache, no-store, must-revalidate',
             },
-            // cache: 'no-store',
+            cache: 'no-store',
         });
 
         if (!response.ok) {
