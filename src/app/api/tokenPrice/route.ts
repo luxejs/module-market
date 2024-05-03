@@ -10,7 +10,7 @@ export async function GET(request: Request) {
             headers: {
                 'Content-Type': 'application/json',
                 'X-CMC_PRO_API_KEY': process.env.CMC_API_KEY!,
-                // 'Cache-Control': 'no-cache, no-store, must-revalidate',
+                'Cache-Control': 'no-cache, no-store, must-revalidate',
             },
             cache: 'no-store',
         });
@@ -22,8 +22,9 @@ export async function GET(request: Request) {
         }
 
         const data = await response.json();
-        const price = parseFloat(data.data[id].quote.USD.price).toFixed(2)
-        const percentChange = parseFloat(data.data[id].quote.USD.percent_change_1h).toFixed(2)+ "%"
+        const comUSD = data.data[id].quote.USD
+        const price = parseFloat(comUSD.price).toFixed(2)
+        const percentChange = parseFloat(comUSD.percent_change_1h).toFixed(2)+ "%"
         // const formattedPercentChange = (percentChange * 100).toFixed(2) + "%";
 
 
