@@ -22,7 +22,7 @@
     {
         "name": "ComChat",
         "url": "https://comchat.io/",
-        "image": "https://comchat.io/icons/favicon-32x32.png",
+        "image": "/images/comchat.webp",
         "description": "LLM GPT aggregator built on Commune Ai",
         "validatorKey": "5D4o6H19z6ctWjS9HzxBpMxqhuzCCCsgXk49AqXGPUqZEpRt",
         "verified": true,
