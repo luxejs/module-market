@@ -3,7 +3,7 @@ import { InjectedAccountWithMeta } from "@polkadot/extension-inject/types"
 import React, { useState } from "react"
 import Modal from "react-responsive-modal"
 import { AiFillCheckCircle } from "react-icons/ai"
-import { infoToast } from "@/src/app/components/toast"
+import { infoToast } from "../toast"
 import { FaTimes } from "react-icons/fa"
 
 const WalletModal = ({

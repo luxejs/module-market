@@ -7,8 +7,8 @@ import {
   InjectedAccountWithMeta,
   InjectedExtension,
 } from "@polkadot/extension-inject/types"
-import WalletModal from "@/src/app/components/modal"
-import { errorToast, successToast } from "@/src/app/components/toast"
+import WalletModal from "@/src/components/modal"
+import { errorToast, successToast } from "@/src/components/toast"
 
 interface PolkadotApiState {
   web3Accounts: (() => Promise<InjectedAccountWithMeta[]>) | null
@@ -74,6 +74,7 @@ export const PolkadotProvider: React.FC<PolkadotProviderProps> = ({
     return () => {
       api?.disconnect()
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [wsEndpoint])
 
   useEffect(() => {

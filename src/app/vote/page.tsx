@@ -1,6 +1,6 @@
-import projectsData from "./buildNStake.json"
-import ModuleCard from "@/src/app/components/card/module"
-import Navbar from "../components/navbar"
+import projectsData from "@/src/constants/buildNStake.json"
+import ModuleCard from "@/src/components/card/module"
+import Navbar from "@/src/components/navbar"
 
 export default function Vote() {
   return (
